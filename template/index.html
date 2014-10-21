@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="Slides Template" />
+    <title>Titolo</title>
+    <link rel="stylesheet" href="../css/progressjs.min.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+name: light
+layout: true
+class: center, middle, light
+---
+
+#Titolo
+##Corsi GNU-Linux 14/15
+###Nome Cognome
+
+```html
+email
+```
+###<img src="../img/poul.logo.png" alt="POuL Logo" style="height: 4em; margin-top: 2em;">
+---
+layout:false
+template:light
+##Dove trovate queste slides:
+```html
+	http://url
+```
+---
+
+name: sign
+layout: true
+.sign[[Nome Cognome](url)]
+.course[Corsi GNU-Linux 14/15 - [POuL](https://poul.org)]
+---
+
+name:argomenti
+.title[
+  ##Argomenti di oggi:
+]
+
+--
+.text[###Titolo Sezione]
+--
+.text[###Titolo Sezione]
+---
+
+template:light
+layout:false
+##Titolo Sezione
+---
+
+template: sign
+layout: true
+---
+
+name:titoloslide
+.title[
+  ##Titolo Slide
+]
+--
+.text[###Testo]
+--
+.text[####Sottosezione]
+--
+.text[###Testo]
+---
+
+name:cc
+template: light
+layout:false
+class: center
+##Grazie per l'attenzione!
+###<img src="../img/ccbysa.png" alt="" style="width: 30%;">
+####Queste slides sono licenziate Creative Commons<br> Attribution-ShareAlike 3.0 Unported
+
+  https://www.poul.org
+
+    </textarea>
+    <script src="../js/progress.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="../js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+      }) ;
+      $('.remark-slide-number').hide()
+      var progbar = progressJs(".remark-slides-area");
+      progbar.start();
+      slideshow.on('showSlide', function (slide) {
+        var total = $('.remark-slide-number').html().split(" / ")[1]
+        progbar.set(slide.getSlideNo()/total*100);
+      });
+    });
+    </script>
+  </body>
+</html>
