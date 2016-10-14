@@ -1,0 +1,3 @@
+[submodule "slides-python"]
+	path = python
+	url = https://github.com/edne/slides-python
